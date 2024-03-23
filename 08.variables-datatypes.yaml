@@ -1,0 +1,25 @@
+- name: Datatypes
+  hosts: localhost
+  vars:
+    Name: Narasimha ## Key Value Pair 
+    Skills:  ## List data type
+      - Devops
+      - AWS
+      - Ansible
+      - Linux
+    Experience:  ## Map data type
+      - Devops: 1
+      - AWS: 4
+      - Ansible: 1
+  tasks:
+  Name: Print the values of Key values
+  ansible.builtin.debug:
+    msg: "Name is {{Name}}"
+
+  Name: Print the values of List Data Types
+  ansible.builtin.debug:
+    msg: "Name is {{Skills}}"
+
+  \Name: Print the values of Map Data Types
+  ansible.builtin.debug:
+    msg: "Name is {{Experience}}"
