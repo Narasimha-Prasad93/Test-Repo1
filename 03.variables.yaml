@@ -1,4 +1,4 @@
-- name: variables
+- name: PLAY LEVEL VARIABLES
   hosts: localhost
   become: yes
   vars:
@@ -6,6 +6,6 @@
     TRAINER: "SivaKumar"
     DURATION: "110HRS"
   tasks:
-  -name: variables learning
+  -name: CHECK VARIABLES
    ansible.builtin.command:
     msg: "Hi i am learning {{COURSE}} Trainer is {{TRAINER:}} Duration is {{DURATION:}}"

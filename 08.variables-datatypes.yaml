@@ -11,6 +11,8 @@
       - Devops: 1
       - AWS: 4
       - Ansible: 1
+    Trainer: true ## boolean data type
+
   tasks:
   - name: Print the values of Key values
     ansible.builtin.debug:
@@ -18,8 +20,13 @@
 
   - name: Print the values of List Data Types
     ansible.builtin.debug:
-      msg: "Name is {{Skills}}"
+      msg: "Skills are {{Skills}}"
 
   - name: Print the values of Map Data Types
     ansible.builtin.debug:
-      msg: "Name is {{Experience}}"
+      msg: "Experience is {{Experience}}"
+
+  - name: Print the values of boolean Data Types
+    ansible.builtin.debug:
+      msg: "Narasimha is your trainer siva: {{Trainer}}"
+
