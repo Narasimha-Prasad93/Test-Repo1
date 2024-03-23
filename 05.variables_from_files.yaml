@@ -1,9 +1,9 @@
 - name: Variables Declartion from Files
   hosts: localhost
   vars_files:
-    variables.yaml
+  - variables.yaml
   tasks:
   - name: Variables Calling from Files
     ansible.builtin.debug:
       msg: "Hi I am learning {{COURSE}}, Trainer is {{TRAINER}}, Duration is {{DURATION}}"
-      
+
