@@ -9,9 +9,8 @@
     - name: variables declaration from task LEVEL
       vars:
        COURSE: "DEVOPS"
-       TRAINER: "PAVAN"
+       TRAINER: "PAVAN"  ## we have in-herited the variable value. that is value has been overided.
        DURATION: "110HRS"
       ansible.builtin.debug:
         msg: "Hi I am learning {{COURSE}}, trainer is {{TRAINER}}, duration is {{DURATION}}"  
 
-        
