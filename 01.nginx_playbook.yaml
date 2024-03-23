@@ -2,14 +2,14 @@
 hosts: localhost
 become: yes
 tasks: 
--name: install nginx
-ansible.builtin.package:
-  name: nginx
-  state: present
+- name: install nginx
+  ansible.builtin.package:
+    name: nginx
+  s tate: present
 
--name: run the nginx service
-ansible.builtin.service:
-  name: nginx 
-  state: restarted
+- name: run the nginx service
+  ansible.builtin.service:
+    name: nginx 
+    state: restarted
 
 
