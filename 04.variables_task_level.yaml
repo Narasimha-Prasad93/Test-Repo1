@@ -1,0 +1,17 @@
+  - name: Varaiable from Task LEVEL
+    hosts: localhost
+    become: yes
+    vars:
+      COURSE: "DEVOPS"
+      TRAINER: "SIVAKUMAR"
+      DURATION: "110HRS"
+    tasks:
+    - name: variables declaration from task LEVEL
+      vars:
+       COURSE: "DEVOPS"
+       TRAINER: "PAVAN"
+       DURATION: "110HRS"
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{COURSE}}, trainer is {{TRAINER}}, duration is {{DURATION}}"  
+
+        
