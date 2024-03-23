@@ -1,0 +1,13 @@
+- name: Loops Concepts in Advance level
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: status of the servers and servies
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    
+    loop:
+      - {name: 'nginx', state: 'present'}
+      - {name: 'git', state: 'absent'}
+      - {name: 'python', state: 'present'}
